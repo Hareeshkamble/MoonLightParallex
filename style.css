@@ -1,0 +1,75 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Source+Code+Pro:wght@200&display=swap');
+body{
+    background-color:#0a2a43; 
+    min-height: 1200px;
+}
+section{
+    transition: 3ms ease;
+    background:#0a2a43; 
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top ,#0a2a43, transparent);
+    z-index: 10000;
+}
+section::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:#0a2a43;
+    mix-blend-mode:color-dodge;
+    z-index: 10000;
+}
+.text{
+    font-weight: 900;
+    position: relative;
+    font-size: 10em;
+    color: white;
+    transition: 30ms ease;
+    font: 2em;
+    z-index: 1;
+letter-spacing: 10px;
+font-family: 'Times New Roman', Times, serif;
+font-size-adjust: initial;
+text-shadow: 3px 3px 40px  snow;
+}
+.moon{
+/* filter: invert(); */
+z-index: 100000;
+transition: 30ms ease;
+}
+.mountain{
+    transition: 30ms ease;
+}
+
+section img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+.road{
+    z-index: 2;
+}
